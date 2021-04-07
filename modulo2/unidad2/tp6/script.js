@@ -17,18 +17,18 @@ let productos = [
     },
     {
         nombre: "papa",
- precio: 52,
- inCart: false
+        precio: 52,
+        inCart: false
     },
     {
         nombre: "palta",
- precio: 55,
- inCart: false
+        precio: 55,
+        inCart: false
     },
     {
         nombre: "fideos",
- precio: 85,
- inCart: false
+        precio: 85,
+        inCart: false
     },
     {
         nombre: "aceite",
@@ -37,8 +37,8 @@ let productos = [
     },
     {
         nombre: "sopa",
- precio: 86,
- inCart: false
+        precio: 86,
+        inCart: false
     },
     {
         nombre: "mermelada",
@@ -96,7 +96,7 @@ nombre: "papel higiénico",
  inCart: false
 },
 {
-    nombre: "salsa de tomate",
+    nombre: "Salsa de tomate",
     precio: 35,
     inCart: false
 },
@@ -105,7 +105,7 @@ nombre: "papel higiénico",
 let idselect = document.getElementById("lista");
 for (let i = 0; i < productos.length; i++) {
  let option = document.createElement("option");
- option.text = productos[i].nombre + productos[i].precio + "pesos";
+ option.text = productos[i].nombre +' $'+ productos[i].precio ;
  option.value = i;
  idselect.add(option);
 }
@@ -139,7 +139,7 @@ function calcular() {
         padre.removeChild(limpiar);
     }
     let plantilla = `
-<table id ="resumen">
+<table id ="resumen" style="width: 30%; margin: 15px auto; text-aling:center; background-color:#f5f5f5;">
 <thead>
 <tr>
 <th>Producto</th>
@@ -152,8 +152,8 @@ function calcular() {
         if (productos[i].inCart === true) {
 plantilla += `
 <tr>
-<td>${productos[i].nombre}</td>
-<td>${productos[i].precio}</td>
+<td>-${productos[i].nombre}</td>
+<td>$${productos[i].precio}</td>
 </tr>
 `;
 }
@@ -162,10 +162,10 @@ plantilla += `
         </tbody>
         <tfoot>
         <tr>
-        <td colspan="2">Total</td>
+        <th>Total</th>
         </tr>
         <tr>
-        <td>${total}</td>
+        <td>$${total}</td>
         </tr>
         </tfoot>
 </table>
