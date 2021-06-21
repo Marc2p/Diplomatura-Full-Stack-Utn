@@ -17,7 +17,7 @@ function App() {
       <footer>
         <p>
         Trabajo proyecto inicial de React Js realizado por Marcos Peirone Para la {curso} brindada por la
-        <a href="https://sceu.frba.utn.edu.ar/e-learning/" rel="noopener noreferrer" target="_blank">Universidad Tecnológica Nacional</a>
+        <a className="App-link" href="https://sceu.frba.utn.edu.ar/e-learning/" rel="noopener noreferrer" target="_blank">Universidad Tecnológica Nacional</a>
         </p>
       </footer>
     </div>
